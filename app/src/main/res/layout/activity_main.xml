@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/imgPath"-->
+<!--        android:hint="Image Path Appears Here"/>-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id = "@+id/img"
+        />
+     <Button
+        android:id="@+id/btn_detect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="154dp"
+        android:text="DETECT" />
+
+    <EditText
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignBottom="@id/btn_detect"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-75dp"
+        android:layout_marginBottom="98dp"
+        android:hint=".............................." />
+
+    <Button
+        android:id="@+id/button_speak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/status"
+        android:layout_marginBottom="-54dp"
+        android:enabled="false"
+        android:text="Text to Speech button" />
+		
+	<com.camerakit.CameraKitView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="477dp"
+        android:layout_above="@id/btn_detect"
+        android:layout_marginBottom="29dp"
+        app:camera_flash="auto"
+        app:camera_facing="back"
+        app:camera_focus="continuous"
+        app:camera_permissions="camera"/>
+
+
+</RelativeLayout>
