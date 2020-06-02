@@ -11,11 +11,13 @@
 <!--        android:layout_height="wrap_content"-->
 <!--        android:id="@+id/imgPath"-->
 <!--        android:hint="Image Path Appears Here"/>-->
-    <ImageView
+     <ImageView
+        android:id="@+id/camera_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id = "@+id/img"
-        />
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_detect"
+        android:layout_marginBottom="29dp"
+        android:src="@drawable/bi1" />
      <Button
         android:id="@+id/btn_detect"
         android:layout_width="match_parent"
@@ -43,16 +45,7 @@
         android:enabled="false"
         android:text="Text to Speech button" />
 		
-	<com.camerakit.CameraKitView
-        android:id="@+id/camera_view"
-        android:layout_width="match_parent"
-        android:layout_height="477dp"
-        android:layout_above="@id/btn_detect"
-        android:layout_marginBottom="29dp"
-        app:camera_flash="auto"
-        app:camera_facing="back"
-        app:camera_focus="continuous"
-        app:camera_permissions="camera"/>
+	
 
 
 </RelativeLayout>
